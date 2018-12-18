@@ -46,8 +46,8 @@ describe('tagged template strings, are an advanced form of template strings', fu
         });
         
         it('the 3rd parameter contains the second expression`s value', function() {
-          function firstValueOnly(strings, firstValue, ____) { 
-            return ____;
+          function firstValueOnly(strings, firstValue, secondValue) { 
+            return secondValue;
           }
           assert.equal(firstValueOnly`uno ${one}, dos ${two}`, 2);
   //need to call the 3rd parameter to get the second expresions value

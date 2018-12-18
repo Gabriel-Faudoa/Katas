@@ -4,7 +4,8 @@
 
 describe('Template string, can contain multiline content', function() {
     it('wrap it in backticks (`) and add a newline, to span across two lines', function() {
-      var normalString = `line1\nline2`;
+      var normalString = `line1
+line2`;
       assert.equal(normalString, 'line1\nline2');
   // \n creates a new line
     });
@@ -19,13 +20,14 @@ describe('Template string, can contain multiline content', function() {
     describe('and expressions inside work too', function() {
       var x = 42;
       it('like simple variables', function() {
-        var multiline = `line 1\n      ${x}`;
-        `${x}`;
+        var multiline = `line 1 
+        ${x}`;
         assert.equal(multiline, 'line 1\n      42');
   //Spaces are taking as a literal
       });
       it('also here spaces matter', function() {
-        var multiline = `\n${x}`;
+        var multiline = `
+${x}`;
         assert.equal(multiline, '\n42');
   //You can call a variable on a new line
       });
