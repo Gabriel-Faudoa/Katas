@@ -14,12 +14,12 @@ describe('Arrow functions', function() {
   //Wrote and expression to replace curly brackets.
     });
     it('one parameter can be written without parens', () => {
-      var func = p => 25 - 1;
+      var func = p => p - 1;
       assert.equal(func(25), 24);
   //No () required as only 1 parameter is present.
     });
     it('many params require parens', () => {
-      var func = param => (23) + (42);
+      var func = (param, param1) => param + param1;
       assert.equal(func(23, 42), 23+42);
   //Assert is expecting 23+43 but you need to put each number in ().
     });

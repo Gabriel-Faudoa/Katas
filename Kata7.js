@@ -29,7 +29,7 @@ describe('`let` restricts the scope of the variable to the current block', () =>
       });
       it('create artifical scope, using curly braces', () => {
         {
-          var {X} = true;
+          var {letX} = true;
         }
         assert.throws(() => console.log(letX
   //the curly braces creates a scope on x
