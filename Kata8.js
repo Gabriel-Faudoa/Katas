@@ -6,13 +6,13 @@ describe('`const` is like `let` plus read-only', () => {
     describe('scalar values are read-only', () => {
       it('e.g. a number', () => {
         const constNum = 0;
-        const Num = 1;
+        // constNum = 1;
         assert.equal(constNum, 0);
   //Syntax const Num wasn't declared properly
       });
       it('or a string', () => {
         const constString = 'I am a const';
-        const String = 'Cant change you?';
+        // constString = 'Cant change you?';
         assert.equal(constString, 'I am a const');
   //syntax const String wasn't declared properly
       });
