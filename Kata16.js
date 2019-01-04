@@ -10,7 +10,7 @@ describe('Object literal properties may be computed values', () => {
     });
     it('can also get a function assigned', () => {
       const key = 'func';
-      const obj = {[key](){ return 'seven'}};
+      const obj = {[key]: () => 'seven'};
       assert.equal(obj.func(), 'seven');
     });
     it('the key may also be the result of a function call', () => {
